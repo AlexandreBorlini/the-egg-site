@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The EGG Site</title>
+
+    <link rel="stylesheet" href="mainStyle.css">
+</head>
+<body style="background-color:  #fcfce8;">
+    
+
+    <script type="text/javascript" src="./recipesdb.js"></script>
+
+    
+    <div class="main_banner">
+        
+        <p class="main_banner_text">The BEST of EGG for you</p>
+    </div>
+    
+    
+    <div class="top_bar">
+
+        <p class="site_name_bar">THE EGG SITE</p>
+        <input class="search_field" id="search_field" placeholder="Ex:. Fried Egg">
+        <button class="search_field_button" onclick="search()"></button> 
+        <button class="home" onclick="reset()"></button>
+    </div>
+
+
+    <div class="recomendation_previews">
+
+        <div>
+            <p class="recommendations_text">OUR RECIPES:</p>
+        </div>
+
+        <div class="recipe_containers" id="recipe_containers"></div>
+        
+        <button class="previous_recipes" id="previous_recipes" onclick="previousRecipes()"></button>
+        <button class="next_recipes" id="next_recipes" onclick="nextRecipes()"></button>
+
+        <script src='preview.js'></script>
+
+    </div>
+    
+    <div class="jj"></div>
+</body>
+</html>

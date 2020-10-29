@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The EGG Site</title>
+
+    <link rel="stylesheet" href="recipeStyle.css">
+</head>
+<body style="background-color:  #fcfce8;">
+    
+
+    <script type="text/javascript" src="./recipesdb.js"></script>
+
+
+    <div class="recipe_image" id="recipe_image">
+
+        <p class="recipe_name" id="recipe_name">RECEITA</p>
+    </div>
+
+    <div class="top_bar">
+
+        <p class="site_name_bar">THE EGG SITE</p>
+        <input class="search_field" id="search_field" placeholder="Ex:. Fried Egg">
+        <button class="search_field_button" onclick="search()"></button> 
+        <button class="home" onclick="reset()"></button>
+    </div>
+    
+
+    <div class="ingredients_container">
+
+        <p class="ingredients_title"><img src="images/eggIcon.png" class="eggIcon">DESCRIPTION:</p>
+        <div class = "description_text" id="description_text">
+
+            <!-- ONDE SERÁ GERADO A DESCRIÇÃO -->
+        </div>
+
+        <p class="ingredients_title"><img src="images/eggIcon.png" class="eggIcon">INGREDIENTS:</p>
+        <div class = "ingredients_list" id="ingredients_list">
+
+            <!-- ONDE SERÁ GERADO OS INGREDIENTES -->
+        </div>
+
+         <p class="directions_title"><img src="images/eggIcon.png" class="eggIcon">DIRECTIONS:</p>
+         <div class = "directions_list" id="directions_list">
+
+            <!-- ONDE SERÁ GERADO OS PASSOS PARA SE FAZER -->
+        </div>
+
+        <p class="directions_title"><img src="images/eggIcon.png" class="eggIcon">YOUTUBE:</p>
+
+            <iframe class="youtube_video" id="youtube_video">
+            </iframe>
+
+        </div>
+        
+        <p style="height: 35em; position: relative;"></p>
+        
+    <script type="text/javascript" src="./recipe.js"></script>
+
+</body>
+</html>
