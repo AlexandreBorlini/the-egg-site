@@ -122,6 +122,8 @@
 
     top:23em;
     left:16vw;
+
+    z-index: 9;
 }
 
 
