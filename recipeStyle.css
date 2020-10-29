@@ -22,7 +22,7 @@
 .search_field{
     
     width: 17vw;
-    height:4vh;
+    height:2em;
     
     display:inline-block;
     margin:1.5em auto;
@@ -181,7 +181,7 @@
 }
 
 /* TELA PARA CELULAR */
-@media screen and (max-width: 800px) and (max-height: 700px) {
+@media screen and (max-width: 1024px) and (max-height: 700px) {
 
     .top_bar{
     
@@ -269,7 +269,7 @@
         height: 5em;
     
         background: URL("images/homeIcon.png");
-        background-size:6em 5em;
+        background-size:6em 4em;
     
         border: none;
     }
