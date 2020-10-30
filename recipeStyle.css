@@ -292,13 +292,13 @@
 .directions_title{
 
     position: relative;
-    top: 28em;
+    top: 23em;
 
     width: 80vw;
 
     color:  #e6b800;
 
-    font-size: 20px;
+    font-size: 25px;
     left: 3vw;
 }
 
@@ -306,13 +306,13 @@
 .ingredients_title{
 
     position: relative;
-    top: 28em;
+    top: 23em;
 
     width: 80vw;
 
     color:  #e6b800;
 
-    font-size: 20px;
+    font-size: 25px;
     left: 3vw;
 }
 
