@@ -109,7 +109,7 @@ for(var i=0; i<directions.length; i++){
 
     var directionElement = document.getElementById("direction" + i);
 
-    directionElement.style.position = "relative";
+    directionElement.style.position = "relative"; 
     directionElement.style.fontSize = "1.2em";
 
     directionElement.style.width = "90vw";
