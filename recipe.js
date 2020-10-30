@@ -112,7 +112,7 @@ for(var i=0; i<directions.length; i++){
     directionElement.style.position = "relative"; 
     directionElement.style.fontSize = "1.2em";
 
-    directionElement.style.width = "90vw";
+    directionElement.style.width = "80vw";
     directionElement.style.height = "auto";
 
     directionElement.style.top = "29em";
