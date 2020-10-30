@@ -1,3 +1,5 @@
+var isMobile = true;
+
 
 var selectedRecipes=[];
 var index    = 0;
@@ -19,7 +21,84 @@ function selectRecipes(search){
     }
 }
 
-function renderPreviews(){
+function renderPhonePreviews(){
+    
+    // Renderizar as receitas ---------------------------------
+    var recipeContainers = document.getElementById("recipe_containers");
+    recipeContainers.innerHTML = "";
+
+    var rowPreviewsCounter = 0; // Quando for 2 aumenta quantidade de colunas
+    var columnsCounter     = 0; // Quantidades de coluna
+    
+    var previewHtml = document.createElement('div'); // O que de fato será colocado no html
+
+    var recipePreviewHtml = ""; // Acumulador de texto html que será colocado dentro do previewHtml
+
+    // Para cada preview de receita renderiza o quadrado
+    for(var i=index; i<maxIndex; i++){
+
+        // HTML de APENAS UM preview, esse será concatenado em uma variável contendo
+        // todos os previews
+        var pieceRecipePreviewHtml = `
+        <div class="recipe_preview` + selectedRecipes[i] + `" id="recipe_preview` + selectedRecipes[i] + `">
+        <div class="recipe_preview_image_cel" style="background: url(`+ window.allRecipes[selectedRecipes[i]].image + `); background-position: center; background-size: auto 20vw;">
+            <div class="recipe_preview_text_container_cel">
+                <div class="recipe_preview_texts_cel">
+                    <p class="recipe_preview_name_cel">`+ window.allRecipes[selectedRecipes[i]].name + `</p>
+                    <p class="recipe_preview_description_cel">`+ window.allRecipes[selectedRecipes[i]].description + `</p>
+                </div>
+            </div>
+        </div>
+        </div>`;
+
+        // Concatena os previews individuais
+        recipePreviewHtml = recipePreviewHtml.concat(pieceRecipePreviewHtml);
+    }
+
+    previewHtml.innerHTML = recipePreviewHtml; // Transforma o texto do html com todos os previews em html de fato
+    recipeContainers.appendChild(previewHtml); // Adiciona no html real
+
+    
+    /*
+        Aplica os styles aos previews criados
+    */
+
+   for(var i=index;i<maxIndex; i++ ){
+
+        if(rowPreviewsCounter>=2){
+        
+            rowPreviewsCounter = 0;
+            columnsCounter++;
+        } 
+
+        var recipePreviewElement = document.getElementById("recipe_preview" + selectedRecipes[i]);
+
+
+            // Style do preview
+            recipePreviewElement.style.width    = "45vw";
+            recipePreviewElement.style.height   = "20vw";
+            recipePreviewElement.style.cursor   = "pointer"; // Faz mostrar ser clicável
+            recipePreviewElement.style.position = "absolute";
+
+            recipePreviewElement.style.top = "calc(40em + " + 24*columnsCounter + "vw)";
+            recipePreviewElement.addEventListener("click", viewRecipe.bind(this, selectedRecipes[i]), false);
+
+
+            // Separa se for o preview da direita ou da esquerda
+            if(rowPreviewsCounter == 0){ // Se for o preview
+
+                recipePreviewElement.style.left = "2vw";
+            }
+            else{
+
+                recipePreviewElement.style.right = "2vw";
+            }
+
+            rowPreviewsCounter++;
+    }
+}
+
+function renderDesktopPreviews(){
     
     // Renderizar as receitas ---------------------------------
     var recipeContainers = document.getElementById("recipe_containers");
@@ -79,7 +158,6 @@ function renderPreviews(){
             recipePreviewElement.style.position = "absolute";
 
             recipePreviewElement.style.top = "calc(40em + " + 18*columnsCounter + "vw)";
-
             recipePreviewElement.addEventListener("click", viewRecipe.bind(this, selectedRecipes[i]), false);
 
 
@@ -90,6 +168,18 @@ function renderPreviews(){
                 recipePreviewElement.style.left = "51vw";
 
             rowPreviewsCounter++;
+    }
+}
+
+
+function renderPreviews(){
+
+    if(isMobile){
+
+        renderPhonePreviews();
+    }
+    else{
+        renderDesktopPreviews();
     }
 }
 

@@ -100,22 +100,6 @@
 }
 
 
-
-
-.recipe_preview{
-    
-    width: 35vw;
-    height: 15vw;
-    
-    position: relative;
-    top: 35em;
-    left: 13vw;
-
-    cursor: pointer;
-}
-
-
-
 /* Imagem de preview da receita
 */
 .recipe_preview_image{
@@ -373,7 +357,7 @@
 
     .previous_recipes{
 
-        margin-top: calc(50.5em + 48vw);
+        margin-top: calc(52em + 60vw);
 
         position: absolute;
         left: 10vw;
@@ -392,7 +376,7 @@
     .next_recipes{
 
 
-        margin-top: calc(50.5em + 48vw);
+        margin-top: calc(52em + 60vw);
 
         position: absolute;
         right: 10vw;
@@ -407,4 +391,65 @@
         transform:scaleX(-1);
         cursor: pointer;
     }
+}
+
+
+/* QUANDO FOR NO CELULAR ----------------------------------------------------------------------------------------------------------------------------*/
+
+
+/* Imagem de preview da receita
+*/
+.recipe_preview_image_cel{
+
+    width: 22.5vw;
+    height: 20vw;
+
+    background: url("images/scotchEggs.jpg");
+    background-position: center;
+    background-size: auto 20vw;
+
+    border-radius: 20px 0px 0px 20px;
+
+    position: absolute;
+}
+
+.recipe_preview_text_container_cel{
+
+    width: 22.5vw;
+    height: 20vw;
+
+    position: absolute;
+    left: 22.5vw; /* TAMANHO DO RECIPE_PREVIEW_IMAGE */
+
+    z-index: -1;
+
+    border-radius: 0px 20px 20px 0px;
+
+    background: #f1f28d;
+}
+
+
+.recipe_preview_name_cel{
+
+    position: relative;
+    top:1vw;
+
+    font-size: 3vw;
+    color: #e6b800;
+}
+
+
+/* Div que contem os textos de nome e descrição da receita
+*/
+.recipe_preview_texts_cel{
+
+    position: relative;
+    top: -2vw;
+
+    text-align: center;
+}
+
+.recipe_preview_description_cel{
+
+   display: none;
 }
