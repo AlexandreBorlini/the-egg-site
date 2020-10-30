@@ -81,7 +81,7 @@ for(var i=0; i<ingredients.length; i++){
     ingredientElement.style.height = "auto";
 
     ingredientElement.style.top = "29em";
-    ingredientElement.style.left = "16vw";
+    ingredientElement.style.left = "10vw";
 }
 
 
@@ -112,11 +112,11 @@ for(var i=0; i<directions.length; i++){
     directionElement.style.position = "relative";
     directionElement.style.fontSize = "1.2em";
 
-    directionElement.style.width = "80vw";
+    directionElement.style.width = "90vw";
     directionElement.style.height = "auto";
 
     directionElement.style.top = "29em";
-    directionElement.style.left = "16vw";
+    directionElement.style.left = "10vw";
 }
 
 

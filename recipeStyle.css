@@ -277,6 +277,18 @@
 
     
 /* Tiulos */
+
+.youtube_video{
+    
+    width: 80vw;
+    height: 50vw;
+    
+    position: relative;
+    top:35em;
+    
+    left:5vw;
+}
+
 .directions_title{
 
     position: relative;
@@ -287,20 +299,8 @@
     color:  #e6b800;
 
     font-size: 20px;
-    left: 8vw;
+    left: 3vw;
 }
-
-.youtube_video{
-
-    width: 80vw;
-    height: 50vw;
-
-    position: relative;
-    top:35em;
-    
-    left:5vw;
-}
-
 
 
 .ingredients_title{
@@ -313,7 +313,7 @@
     color:  #e6b800;
 
     font-size: 20px;
-    left: 8vw;
+    left: 3vw;
 }
 
 /* Textos explicativos*/
@@ -322,11 +322,11 @@
     position: relative;
     font-size: 1.2em;
 
-    width: 80vw;
+    width: 90vw;
     height: auto;
 
     top:29em;
-    left:16vw;
+    left:10vw;
 }
 
 }
