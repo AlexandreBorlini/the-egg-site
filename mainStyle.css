@@ -242,38 +242,4 @@
     height: 90em;
     width: 100%;
 }
-
-/* QUANDO A TELA FOR PEQUENA */
-@media screen and (max-width: 1024px) {
-    
-    .recipe_preview_description{
-
-        display: none;
-    }
-
-    .recipe_preview_name{
-
-        position: relative;
-        top:4vw;
-
-        font-size: 3vw;
-        color: #e6b800;
-    }    
-
-    .recommendations_text{
-
-        position: absolute;
-        top: 17.9em;
-    
-        font-size: 30px;
-        left: 6vw;
-    
-        color: #e6b800;
-    }
-
-    .jj{
-
-        height: 60em;
-        width: 100%;
-    }
 }
