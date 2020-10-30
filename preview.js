@@ -71,26 +71,28 @@ function renderPreviews(){
 
         var recipePreviewElement = document.getElementById("recipe_preview" + selectedRecipes[i]);
 
-        // Style do preview
-        recipePreviewElement.style.width = "35vw";
-        recipePreviewElement.style.height = "15vw";
-        recipePreviewElement.style.cursor = "pointer"; // Faz mostrar ser clicável
-        recipePreviewElement.style.position = "absolute";
 
-        recipePreviewElement.style.top = "calc(40em + " + 18*columnsCounter + "vw)";
+            // Style do preview
+            recipePreviewElement.style.width = "35vw";
+            recipePreviewElement.style.height = "15vw";
+            recipePreviewElement.style.cursor = "pointer"; // Faz mostrar ser clicável
+            recipePreviewElement.style.position = "absolute";
 
-        recipePreviewElement.addEventListener("click", viewRecipe.bind(this, selectedRecipes[i]), false);
+            recipePreviewElement.style.top = "calc(40em + " + 18*columnsCounter + "vw)";
+
+            recipePreviewElement.addEventListener("click", viewRecipe.bind(this, selectedRecipes[i]), false);
 
 
-        // Separa se for o preview da direita ou da esquerda
-        if(rowPreviewsCounter == 0) // Se for o preview
-            recipePreviewElement.style.left = "13vw";
-        else
-            recipePreviewElement.style.left = "51vw";
+            // Separa se for o preview da direita ou da esquerda
+            if(rowPreviewsCounter == 0) // Se for o preview
+                recipePreviewElement.style.left = "13vw";
+            else
+                recipePreviewElement.style.left = "51vw";
 
-        rowPreviewsCounter++;
+            rowPreviewsCounter++;
     }
 }
+
 
 function renderPreviewsWithSearch(search){
     
