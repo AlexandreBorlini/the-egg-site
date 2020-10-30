@@ -75,12 +75,12 @@ for(var i=0; i<ingredients.length; i++){
     var ingredientElement = document.getElementById("ingredient" + i);
 
     ingredientElement.style.position = "relative";
-    ingredientElement.style.fontSize = "1.5em";
+    ingredientElement.style.fontSize = "1.2em";
 
     ingredientElement.style.width = "50vw";
     ingredientElement.style.height = "auto";
 
-    ingredientElement.style.top = "23em";
+    ingredientElement.style.top = "29em";
     ingredientElement.style.left = "16vw";
 }
 
@@ -110,12 +110,12 @@ for(var i=0; i<directions.length; i++){
     var directionElement = document.getElementById("direction" + i);
 
     directionElement.style.position = "relative";
-    directionElement.style.fontSize = "1.5em";
+    directionElement.style.fontSize = "1.2em";
 
     directionElement.style.width = "80vw";
     directionElement.style.height = "auto";
 
-    directionElement.style.top = "23em";
+    directionElement.style.top = "29em";
     directionElement.style.left = "16vw";
 }
 

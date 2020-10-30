@@ -370,89 +370,85 @@
         height: 60em;
         width: 100%;
     }
-
-
-
-
     
-/* Imagem de preview da receita
-*/
-.recipe_preview_image{
+    /* Imagem de preview da receita
+    */
+    .recipe_preview_image{
 
-    width: 17vw;
-    height: 17vw;
+        width: 17vw;
+        height: 17vw;
 
-    background: url("images/scotchEggs.jpg");
-    background-position: center;
-    background-size: auto 20vw;
+        background: url("images/scotchEggs.jpg");
+        background-position: center;
+        background-size: auto 20vw;
 
-    border-radius: 20px 0px 0px 20px;
+        border-radius: 20px 0px 0px 20px;
 
-    position: absolute;
-}
+        position: absolute;
+    }
 
-.recipe_preview_text_container{
+    .recipe_preview_text_container{
 
-    width: 18vw;
-    height: 17vw;
+        width: 18vw;
+        height: 17vw;
 
-    position: absolute;
-    left: 17vw; /* TAMANHO DO RECIPE_PREVIEW_IMAGE */
+        position: absolute;
+        left: 17vw; /* TAMANHO DO RECIPE_PREVIEW_IMAGE */
 
-    z-index: -1;
+        z-index: -1;
 
-    border-radius: 0px 20px 20px 0px;
+        border-radius: 0px 20px 20px 0px;
 
-    background: #f1f28d;
-}
-
-
-.recipe_preview_name{
-
-    position: relative;
-    top:1vw;
-
-    font-size: 3vw;
-    color: #e6b800;
-}
+        background: #f1f28d;
+    }
 
 
+    .recipe_preview_name{
 
-    
-.previous_recipes{
+        position: relative;
+        top:1vw;
 
-    margin-top: calc(50.5em + 48vw);
-
-    position: absolute;
-    left: 10vw;
-
-    width: 17vw;
-    height: 17vw;
-
-    background: url("images/chickenIcon.png");
-    background-size: 17vw 17vw;
-    border: none;
-
-    cursor: pointer;
-}
+        font-size: 3vw;
+        color: #e6b800;
+    }
 
 
-.next_recipes{
 
-    
-    margin-top: calc(50.5em + 48vw);
 
-    position: absolute;
-    right: 10vw;
+    .previous_recipes{
 
-    width: 17vw;
-    height: 17vw;
+        margin-top: calc(50.5em + 48vw);
 
-    background: url("images/chickenIcon.png");
-    background-size: 17vw 17vw;
-    border: none;
+        position: absolute;
+        left: 10vw;
 
-    transform:scaleX(-1);
-    cursor: pointer;
-}
+        width: 17vw;
+        height: 17vw;
+
+        background: url("images/chickenIcon.png");
+        background-size: 17vw 17vw;
+        border: none;
+
+        cursor: pointer;
+    }
+
+
+    .next_recipes{
+
+
+        margin-top: calc(50.5em + 48vw);
+
+        position: absolute;
+        right: 10vw;
+
+        width: 17vw;
+        height: 17vw;
+
+        background: url("images/chickenIcon.png");
+        background-size: 17vw 17vw;
+        border: none;
+
+        transform:scaleX(-1);
+        cursor: pointer;
+    }
 }
