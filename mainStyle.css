@@ -13,7 +13,6 @@
 }
 
 .main_banner_text{
-     
     
     font-size: 500%;
     color: white;
@@ -32,7 +31,7 @@
     left: 0px;
     
     width: 100%;
-    height: calc(4em + 5vh);
+    height: 4.5em;
 
     background-color: #f1f28d;
     
