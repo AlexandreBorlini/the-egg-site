@@ -4,12 +4,14 @@ window.mobileCheck = function() {
     return check;
   };
 
-var isMobile = mobileCheck();
+var isMobile = true;
 
 
 var selectedRecipes=[];
 var index    = 0;
+
 var maxIndex = 6;
+var maxIndexMobile = 3;
 
 // Filtra as receitas por nome se search for uma string ou 
 // por tipo se for por número 
@@ -27,6 +29,7 @@ function selectRecipes(search){
     }
 }
 
+// Modelo de previews para MOBILE
 function renderPhonePreviews(){
     
     // Renderizar as receitas ---------------------------------
@@ -47,7 +50,7 @@ function renderPhonePreviews(){
         // todos os previews
         var pieceRecipePreviewHtml = `
         <div class="recipe_preview` + selectedRecipes[i] + `" id="recipe_preview` + selectedRecipes[i] + `">
-        <div class="recipe_preview_image_cel" style="background: url(`+ window.allRecipes[selectedRecipes[i]].image + `); background-position: center; background-size: auto 20vw;">
+        <div class="recipe_preview_image_cel" style="background: url(`+ window.allRecipes[selectedRecipes[i]].image + `); background-position: center; background-size: auto 35vw;">
             <div class="recipe_preview_text_container_cel">
                 <div class="recipe_preview_texts_cel">
                     <p class="recipe_preview_name_cel">`+ window.allRecipes[selectedRecipes[i]].name + `</p>
@@ -71,39 +74,25 @@ function renderPhonePreviews(){
 
    for(var i=index;i<maxIndex; i++ ){
 
-        if(rowPreviewsCounter>=2){
-        
-            rowPreviewsCounter = 0;
-            columnsCounter++;
-        } 
-
         var recipePreviewElement = document.getElementById("recipe_preview" + selectedRecipes[i]);
 
 
             // Style do preview
-            recipePreviewElement.style.width    = "45vw";
-            recipePreviewElement.style.height   = "20vw";
+            recipePreviewElement.style.width    = "70vw";
+            recipePreviewElement.style.height   = "35vw";
             recipePreviewElement.style.cursor   = "pointer"; // Faz mostrar ser clicável
             recipePreviewElement.style.position = "absolute";
 
-            recipePreviewElement.style.top = "calc(40em + " + 24*columnsCounter + "vw)";
+            recipePreviewElement.style.top = "calc(40em + " + 30*columnsCounter + "vw)";
             recipePreviewElement.addEventListener("click", viewRecipe.bind(this, selectedRecipes[i]), false);
 
+            recipePreviewElement.style.left = "15vw";
 
-            // Separa se for o preview da direita ou da esquerda
-            if(rowPreviewsCounter == 0){ // Se for o preview
-
-                recipePreviewElement.style.left = "2vw";
-            }
-            else{
-
-                recipePreviewElement.style.right = "2vw";
-            }
-
-            rowPreviewsCounter++;
+            columnsCounter++;
     }
 }
 
+// Modelo de preiews para DESKTOP
 function renderDesktopPreviews(){
     
     // Renderizar as receitas ---------------------------------
@@ -177,7 +166,7 @@ function renderDesktopPreviews(){
     }
 }
 
-
+// Ve se é DESKTOP ou MOBILE e renderiza
 function renderPreviews(){
 
     if(isMobile){
@@ -199,11 +188,15 @@ function renderPreviewsWithSearch(search){
     selectRecipes(search);
 
     index =0;
-    if(selectedRecipes.length < 6){
+    var step;
+
+    if(isMobile) {step = maxIndexMobile } else { step = maxIndex }
+
+    if(selectedRecipes.length < step){
         maxIndex = selectedRecipes.length;
     }
     else{
-        maxIndex = 6;
+        maxIndex = step;
     }
 
     renderPreviews();
@@ -263,20 +256,23 @@ function viewRecipe(recipeId){
 
 function nextRecipes(){
     
-    if(index + 6 != selectedRecipes.length){
+    var step;
+    if(isMobile){ step = maxIndexMobile; } else { step = maxIndex; }
+
+    if(index + step != selectedRecipes.length){
         
-        if(maxIndex + 6 > selectedRecipes.length){
+        if(maxIndex + step > selectedRecipes.length){
             
             maxIndex = selectedRecipes.length;
         }
         else{
             
-            maxIndex+= 6;
+            maxIndex+= step;
         }
         
-        if(index + 6 <= maxIndex){
+        if(index + step <= maxIndex){
             
-            index += 6;
+            index += step;
         }
         
         renderPreviews();
@@ -285,16 +281,19 @@ function nextRecipes(){
 
 function previousRecipes(){
     
-    if(index -6 >= 0 && index -6 != maxIndex-6){
+    var step;
+    if(isMobile){ step = maxIndexMobile; } else { step = maxIndex; }
+
+    if(index -step >= 0 && index -step != maxIndex-step){
         
-        index -=6;
+        index -=step;
         
-        if(index + 6 > selectedRecipes.length)
+        if(index + step > selectedRecipes.length)
         maxIndex = selectedRecipes.length;
         
         else{
             
-            maxIndex = index + 6;
+            maxIndex = index + step;
         }
     }
     

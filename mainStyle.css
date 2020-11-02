@@ -357,7 +357,7 @@
 
     .previous_recipes{
 
-        margin-top: calc(52em + 60vw);
+        margin-top: calc(55em + 73vw);
 
         position: absolute;
         left: 10vw;
@@ -376,7 +376,7 @@
     .next_recipes{
 
 
-        margin-top: calc(52em + 60vw);
+        margin-top: calc(55em + 73vw);
 
         position: absolute;
         right: 10vw;
@@ -401,12 +401,11 @@
 */
 .recipe_preview_image_cel{
 
-    width: 22.5vw;
-    height: 20vw;
+    width: 30vw;
+    height: 25vw;
 
-    background: url("images/scotchEggs.jpg");
     background-position: center;
-    background-size: auto 20vw;
+    background-size: auto 40vw;
 
     border-radius: 20px 0px 0px 20px;
 
@@ -415,15 +414,17 @@
 
 .recipe_preview_text_container_cel{
 
-    width: 22.5vw;
-    height: 20vw;
+    width: 40vw;
+    height: 25vw;
 
     position: absolute;
-    left: 22.5vw; /* TAMANHO DO RECIPE_PREVIEW_IMAGE */
+    left: 30vw; /* TAMANHO DO RECIPE_PREVIEW_IMAGE */
 
     z-index: -1;
 
     border-radius: 0px 20px 20px 0px;
+    
+    display:inline-block;
 
     background: #f1f28d;
 }
@@ -432,9 +433,12 @@
 .recipe_preview_name_cel{
 
     position: relative;
-    top:1vw;
+    top:2.4vw;
+    
+    text-align: center;
+    vertical-align: middle;
 
-    font-size: 3vw;
+    font-size: 6vw;
     color: #e6b800;
 }
 
