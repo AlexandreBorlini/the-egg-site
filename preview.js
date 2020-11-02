@@ -190,7 +190,7 @@ function renderPreviewsWithSearch(search){
     index =0;
     var step;
 
-    if(isMobile) {step = maxIndexMobile } else { step = maxIndex }
+    if(isMobile) {step = maxIndexMobile; } else { step = maxIndex; }
 
     if(selectedRecipes.length < step){
         maxIndex = selectedRecipes.length;
@@ -257,33 +257,32 @@ function viewRecipe(recipeId){
 function nextRecipes(){
     
     var step;
-    if(isMobile){ step = maxIndexMobile; } else { step = maxIndex; }
+    if(isMobile){ step = maxIndexMobile; } else { step = 6; }
 
-    if(index + step != selectedRecipes.length){
-        
-        if(maxIndex + step > selectedRecipes.length){
-            
-            maxIndex = selectedRecipes.length;
-        }
-        else{
-            
-            maxIndex+= step;
-        }
-        
-        if(index + step <= maxIndex){
-            
-            index += step;
-        }
-        
-        renderPreviews();
+
+    if(maxIndex <  selectedRecipes.length){
+
+    if(maxIndex + step >= selectedRecipes.length){
+
+        index += selectedRecipes.length - maxIndex +1;
+        maxIndex = selectedRecipes.length;
     }
+    else if(maxIndex + step < selectedRecipes.length){
+
+        maxIndex += step;
+        index += step;
+    }
+}
+
+    renderPreviews();
 }
 
 function previousRecipes(){
     
     var step;
-    if(isMobile){ step = maxIndexMobile; } else { step = maxIndex; }
+    if(isMobile){ step = maxIndexMobile; } else { step = 6; }
 
+    
     if(index -step >= 0 && index -step != maxIndex-step){
         
         index -=step;
