@@ -4,7 +4,7 @@ window.mobileCheck = function() {
     return check;
   };
 
-var isMobile = true;
+var isMobile = mobileCheck();
 
 
 var selectedRecipes=[];
