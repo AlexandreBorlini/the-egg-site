@@ -357,7 +357,7 @@
 
     .previous_recipes{
 
-        margin-top: calc(55em + 73vw);
+        margin-top: calc(55em + 71vw);
 
         position: absolute;
         left: 10vw;
@@ -376,7 +376,7 @@
     .next_recipes{
 
 
-        margin-top: calc(55em + 73vw);
+        margin-top: calc(55em + 71vw);
 
         position: absolute;
         right: 10vw;
