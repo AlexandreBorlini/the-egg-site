@@ -165,21 +165,6 @@
 }
 
 
-.home{
-
-    position: absolute;
-    right: 10vw;
-    top: 1em;
-
-    width: 5em;
-    height: 4em;
-
-    background: URL("images/homeIcon.png");
-    background-size: 5em 4em;
-
-    border: none;
-}
-
 /* TELA PARA CELULAR -----------------------------------------------------------------------------------*/
 @media screen and (max-width: 800px) {
 
@@ -261,17 +246,7 @@
     /* Nome do site que fica na barra
     */
     .site_name_bar{
-
-        position: absolute;
-        left: 3vw;
-
-        margin:1.8em auto;
-
-        font-size: 0.9em;
-
-        font-weight: bold;
-
-        color: #e6b800;
+            display: none;
     }
 
 

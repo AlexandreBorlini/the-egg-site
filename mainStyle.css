@@ -206,21 +206,6 @@
     cursor: pointer;
 }
 
-.home{
-
-    position: absolute;
-    right: 10vw;
-    top: 1em;
-
-    width: 5em;
-    height: 4em;
-
-    background: URL("images/homeIcon.png");
-    background-size: 5em 4em;
-
-    border: none;
-}
-
 .jj{
 
     height: 110em;
@@ -229,22 +214,6 @@
 
 /* QUANDO A TELA FOR PEQUENA ------------------------------------------------------------------------------------------------*/
 @media screen and (max-width: 800px) {
-
-
-    .home{
-
-        position: absolute;
-        right: 3vw;
-        top: 1.4em;
-    
-        width: 4em;
-        height: 3em;
-    
-        background: URL("images/homeIcon.png");
-        background-size: 4em 3em;
-    
-        border: none;
-    }
 
     .main_banner_text{
 
@@ -309,16 +278,7 @@
     */
     .site_name_bar{
 
-        position: absolute;
-        left: 3vw;
-
-        margin:1.8em auto;
-
-        font-size: 0.9em;
-
-        font-weight: bold;
-
-        color: #e6b800;
+        display: none;
     }
 
 
@@ -357,7 +317,7 @@
 
     .previous_recipes{
 
-        margin-top: calc(55em + 71vw);
+        margin-top: calc(55em + 61vw);
 
         position: absolute;
         left: 10vw;
@@ -376,7 +336,7 @@
     .next_recipes{
 
 
-        margin-top: calc(55em + 71vw);
+        margin-top: calc(55em + 61vw);
 
         position: absolute;
         right: 10vw;
